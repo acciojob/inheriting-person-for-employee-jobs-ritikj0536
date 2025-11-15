@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
 	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+	<h2>Person & Employee Inheritance Test</h2>
+	<p>Open the browser console to test the classes.</p>
 
+	<button id="testPerson">Test Person</button>
+	<button id="testEmployee">Test Employee</button>
+
+    <script type="text/javascript" src="./script.js"></script>
+
+	<script>
+		// Buttons to test functionality
+		document.getElementById("testPerson").addEventListener("click", function () {
+			const p = new Person("Alice", 25);
+			p.greet();
+		});
+
+		document.getElementById("testEmployee").addEventListener("click", function () {
+			const e = new Employee("Bob", 30, "Manager");
+			e.jobGreet();
+		});
+	</script>
 </body>
-
 </html>
